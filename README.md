@@ -16,18 +16,15 @@ Place `studentVle.csv` in the `data/archive/` folder.
 1. Install dependencies:
    pip install duckdb pandas matplotlib jupyter
 
-2. Run the setup script to load data into DuckDB:
-   python setup.py
-
-3. Open the notebook:
+2. Open the notebook:
    jupyter notebook oulad_duckdb.ipynb
 
-4. Run all cells from top to bottom.
+3. Run all cells from top to bottom.
 
 ## Project Structure
 
 - oulad_duckdb.ipynb   # Main analysis notebook
-- setup.py             # Database setup script
+- setup.py             # Alternative database setup script
 - data/archive/        # Place studentVle.csv here
 - oulad.db             # DuckDB database (auto-generated)
 
