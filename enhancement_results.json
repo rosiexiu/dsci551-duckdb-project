@@ -1,0 +1,310 @@
+{
+  "storage": {
+    "raw_csv_mb": 432.8,
+    "duckdb_mb": 62.0
+  },
+  "benchmark": {
+    "header": "DuckDB vs MySQL (10.6M rows, 5 runs DuckDB, 3 runs MySQL)",
+    "queries": [
+      {
+        "name": "Q1: GROUP BY date (aggregation)",
+        "duckdb_ms": 3.8,
+        "mysql_ms": 2370,
+        "speedup": 618.3
+      },
+      {
+        "name": "Q2: GROUP BY module (avg + count)",
+        "duckdb_ms": 12.0,
+        "mysql_ms": 2956,
+        "speedup": 247.4
+      },
+      {
+        "name": "Q3: GROUP BY + ORDER BY + LIMIT",
+        "duckdb_ms": 14.2,
+        "mysql_ms": 2716,
+        "speedup": 191.6
+      }
+    ]
+  },
+  "column_cardinality": {
+    "code_module": 7,
+    "code_presentation": 4,
+    "id_student": 26074,
+    "id_site": 6268,
+    "date": 295,
+    "sum_click": 498
+  },
+  "adv_query_1": {
+    "desc": "Student demographics + performance (4-table JOIN)",
+    "rows": [
+      {
+        "gender": "M",
+        "age_band": "55<=",
+        "region": "Scotland",
+        "student_count": 21,
+        "avg_clicks": 4.3,
+        "avg_score": 85.8
+      },
+      {
+        "gender": "M",
+        "age_band": "55<=",
+        "region": "South Region",
+        "student_count": 24,
+        "avg_clicks": 4.0,
+        "avg_score": 84.2
+      },
+      {
+        "gender": "M",
+        "age_band": "55<=",
+        "region": "London Region",
+        "student_count": 25,
+        "avg_clicks": 3.6,
+        "avg_score": 83.3
+      },
+      {
+        "gender": "F",
+        "age_band": "35-55",
+        "region": "North Region",
+        "student_count": 127,
+        "avg_clicks": 4.2,
+        "avg_score": 83.0
+      },
+      {
+        "gender": "M",
+        "age_band": "35-55",
+        "region": "North Region",
+        "student_count": 226,
+        "avg_clicks": 4.0,
+        "avg_score": 82.6
+      },
+      {
+        "gender": "M",
+        "age_band": "55<=",
+        "region": "South East Region",
+        "student_count": 13,
+        "avg_clicks": 3.8,
+        "avg_score": 82.3
+      },
+      {
+        "gender": "F",
+        "age_band": "35-55",
+        "region": "South Region",
+        "student_count": 346,
+        "avg_clicks": 3.8,
+        "avg_score": 82.2
+      },
+      {
+        "gender": "M",
+        "age_band": "35-55",
+        "region": "South East Region",
+        "student_count": 218,
+        "avg_clicks": 4.1,
+        "avg_score": 82.1
+      },
+      {
+        "gender": "F",
+        "age_band": "35-55",
+        "region": "Scotland",
+        "student_count": 386,
+        "avg_clicks": 3.9,
+        "avg_score": 82.0
+      },
+      {
+        "gender": "M",
+        "age_band": "35-55",
+        "region": "Scotland",
+        "student_count": 475,
+        "avg_clicks": 4.1,
+        "avg_score": 81.5
+      },
+      {
+        "gender": "M",
+        "age_band": "35-55",
+        "region": "South West Region",
+        "student_count": 234,
+        "avg_clicks": 4.0,
+        "avg_score": 81.2
+      },
+      {
+        "gender": "F",
+        "age_band": "35-55",
+        "region": "South East Region",
+        "student_count": 271,
+        "avg_clicks": 3.8,
+        "avg_score": 81.1
+      },
+      {
+        "gender": "F",
+        "age_band": "35-55",
+        "region": "Yorkshire Region",
+        "student_count": 204,
+        "avg_clicks": 3.6,
+        "avg_score": 80.9
+      },
+      {
+        "gender": "M",
+        "age_band": "35-55",
+        "region": "East Midlands Region",
+        "student_count": 214,
+        "avg_clicks": 3.9,
+        "avg_score": 80.7
+      },
+      {
+        "gender": "M",
+        "age_band": "55<=",
+        "region": "East Anglian Region",
+        "student_count": 13,
+        "avg_clicks": 4.0,
+        "avg_score": 80.7
+      }
+    ]
+  },
+  "adv_query_2": {
+    "desc": "Course dropout & engagement analysis (5-table JOIN)",
+    "rows": [
+      {
+        "final_result": "Distinction",
+        "code_module": "BBB",
+        "avg_unreg_day": NaN,
+        "student_count": 677,
+        "avg_clicks_per_student": 1478.0
+      },
+      {
+        "final_result": "Distinction",
+        "code_module": "FFF",
+        "avg_unreg_day": NaN,
+        "student_count": 670,
+        "avg_clicks_per_student": 5198.0
+      },
+      {
+        "final_result": "Distinction",
+        "code_module": "CCC",
+        "avg_unreg_day": NaN,
+        "student_count": 498,
+        "avg_clicks_per_student": 2574.0
+      },
+      {
+        "final_result": "Distinction",
+        "code_module": "GGG",
+        "avg_unreg_day": NaN,
+        "student_count": 396,
+        "avg_clicks_per_student": 881.0
+      },
+      {
+        "final_result": "Distinction",
+        "code_module": "DDD",
+        "avg_unreg_day": NaN,
+        "student_count": 383,
+        "avg_clicks_per_student": 1983.0
+      },
+      {
+        "final_result": "Distinction",
+        "code_module": "EEE",
+        "avg_unreg_day": NaN,
+        "student_count": 356,
+        "avg_clicks_per_student": 2868.0
+      },
+      {
+        "final_result": "Distinction",
+        "code_module": "AAA",
+        "avg_unreg_day": NaN,
+        "student_count": 44,
+        "avg_clicks_per_student": 3855.0
+      },
+      {
+        "final_result": "Fail",
+        "code_module": "BBB",
+        "avg_unreg_day": 159.0,
+        "student_count": 1757,
+        "avg_clicks_per_student": 334.0
+      },
+      {
+        "final_result": "Fail",
+        "code_module": "FFF",
+        "avg_unreg_day": -3.0,
+        "student_count": 1697,
+        "avg_clicks_per_student": 1218.0
+      },
+      {
+        "final_result": "Fail",
+        "code_module": "DDD",
+        "avg_unreg_day": -0.0,
+        "student_count": 1390,
+        "avg_clicks_per_student": 592.0
+      },
+      {
+        "final_result": "Fail",
+        "code_module": "CCC",
+        "avg_unreg_day": NaN,
+        "student_count": 781,
+        "avg_clicks_per_student": 725.0
+      },
+      {
+        "final_result": "Fail",
+        "code_module": "GGG",
+        "avg_unreg_day": NaN,
+        "student_count": 727,
+        "avg_clicks_per_student": 220.0
+      },
+      {
+        "final_result": "Fail",
+        "code_module": "EEE",
+        "avg_unreg_day": NaN,
+        "student_count": 557,
+        "avg_clicks_per_student": 605.0
+      },
+      {
+        "final_result": "Fail",
+        "code_module": "AAA",
+        "avg_unreg_day": NaN,
+        "student_count": 91,
+        "avg_clicks_per_student": 622.0
+      },
+      {
+        "final_result": "Pass",
+        "code_module": "BBB",
+        "avg_unreg_day": NaN,
+        "student_count": 3077,
+        "avg_clicks_per_student": 1071.0
+      },
+      {
+        "final_result": "Pass",
+        "code_module": "FFF",
+        "avg_unreg_day": NaN,
+        "student_count": 2978,
+        "avg_clicks_per_student": 3624.0
+      },
+      {
+        "final_result": "Pass",
+        "code_module": "DDD",
+        "avg_unreg_day": NaN,
+        "student_count": 2227,
+        "avg_clicks_per_student": 1480.0
+      },
+      {
+        "final_result": "Pass",
+        "code_module": "EEE",
+        "avg_unreg_day": NaN,
+        "student_count": 1294,
+        "avg_clicks_per_student": 1881.0
+      },
+      {
+        "final_result": "Pass",
+        "code_module": "CCC",
+        "avg_unreg_day": NaN,
+        "student_count": 1180,
+        "avg_clicks_per_student": 1893.0
+      },
+      {
+        "final_result": "Pass",
+        "code_module": "GGG",
+        "avg_unreg_day": NaN,
+        "student_count": 1118,
+        "avg_clicks_per_student": 712.0
+      }
+    ]
+  },
+  "explain_q1": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_decompress_integ\u2502\n\u2502    ral_bigint(#0, -25)    \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502          ~0 rows          \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502          ORDER_BY         \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502   oulad.main.student_vle  \u2502\n\u2502         .date ASC         \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_compress_integra\u2502\n\u2502    l_usmallint(#0, -25)   \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502         ~299 rows         \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_decompress_integ\u2502\n\u2502    ral_bigint(#0, -25)    \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502         ~299 rows         \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502   PERFECT_HASH_GROUP_BY   \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502         Groups: #0        \u2502\n\u2502                           \u2502\n\u2502        Aggregates:        \u2502\n\u2502    sum_no_overflow(#1)    \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502            date           \u2502\n\u2502         sum_click         \u2502\n\u2502                           \u2502\n\u2502      ~10,655,280 rows     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_compress_integra\u2502\n\u2502    l_usmallint(#0, -25)   \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502      ~10,655,280 rows     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502          SEQ_SCAN         \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502           Table:          \u2502\n\u2502   oulad.main.student_vle  \u2502\n\u2502                           \u2502\n\u2502   Type: Sequential Scan   \u2502\n\u2502                           \u2502\n\u2502        Projections:       \u2502\n\u2502            date           \u2502\n\u2502         sum_click         \u2502\n\u2502                           \u2502\n\u2502      ~10,655,280 rows     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n",
+  "explain_q3": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502           TOP_N           \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502          Top: 20          \u2502\n\u2502                           \u2502\n\u2502         Order By:         \u2502\n\u2502 sum(oulad.main.student_vle\u2502\n\u2502      .sum_click) DESC     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_decompress_integ\u2502\n\u2502   ral_bigint(#0, 526721)  \u2502\n\u2502             #1            \u2502\n\u2502             #2            \u2502\n\u2502                           \u2502\n\u2502        ~6,005 rows        \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502       HASH_GROUP_BY       \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502         Groups: #0        \u2502\n\u2502                           \u2502\n\u2502        Aggregates:        \u2502\n\u2502        count_star()       \u2502\n\u2502    sum_no_overflow(#1)    \u2502\n\u2502                           \u2502\n\u2502        ~6,005 rows        \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502          id_site          \u2502\n\u2502         sum_click         \u2502\n\u2502                           \u2502\n\u2502      ~10,655,280 rows     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_compress_integra\u2502\n\u2502   l_uinteger(#0, 526721)  \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502      ~10,655,280 rows     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502          SEQ_SCAN         \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502           Table:          \u2502\n\u2502   oulad.main.student_vle  \u2502\n\u2502                           \u2502\n\u2502   Type: Sequential Scan   \u2502\n\u2502                           \u2502\n\u2502        Projections:       \u2502\n\u2502          id_site          \u2502\n\u2502         sum_click         \u2502\n\u2502                           \u2502\n\u2502      ~10,655,280 rows     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n",
+  "explain_analyze": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u2502\n\u2502\u2502    Query Profiling Information    \u2502\u2502\n\u2502\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nEXPLAIN ANALYZE SELECT code_module, AVG(sum_click) AS avg_clicks FROM student_vle GROUP BY code_module ORDER BY avg_clicks DESC\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u2502\n\u2502\u2502              Total Time: 0.0062s             \u2502\u2502\n\u2502\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502           QUERY           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502      EXPLAIN_ANALYZE      \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502                           \u2502\n\u2502           0 rows          \u2502\n\u2502           0.00s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_decompress_strin\u2502\n\u2502           g(#0)           \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502           7 rows          \u2502\n\u2502           0.00s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502          ORDER_BY         \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502 avg(oulad.main.student_vle\u2502\n\u2502      .sum_click) DESC     \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502           7 rows          \u2502\n\u2502           0.00s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_compress_string_\u2502\n\u2502        uinteger(#0)       \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502           7 rows          \u2502\n\u2502           0.00s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_decompress_strin\u2502\n\u2502           g(#0)           \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502           7 rows          \u2502\n\u2502           0.00s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502       HASH_GROUP_BY       \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502         Groups: #0        \u2502\n\u2502    Aggregates: avg(#1)    \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502           7 rows          \u2502\n\u2502           0.04s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502        code_module        \u2502\n\u2502         sum_click         \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502      10,655,280 rows      \u2502\n\u2502           0.00s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         PROJECTION        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502__internal_compress_string_\u2502\n\u2502        uinteger(#0)       \u2502\n\u2502             #1            \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502      10,655,280 rows      \u2502\n\u2502           0.00s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502         TABLE_SCAN        \u2502\n\u2502    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   \u2502\n\u2502           Table:          \u2502\n\u2502   oulad.main.student_vle  \u2502\n\u2502                           \u2502\n\u2502   Type: Sequential Scan   \u2502\n\u2502                           \u2502\n\u2502        Projections:       \u2502\n\u2502        code_module        \u2502\n\u2502         sum_click         \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502                           \u2502\n\u2502      10,655,280 rows      \u2502\n\u2502           0.03s           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n"
+}
