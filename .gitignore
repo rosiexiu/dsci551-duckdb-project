@@ -1,2 +1,9 @@
 data/
 *.db
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.pyc
+.Rhistory
+*.rtf
+student_vle_noheader.csv
