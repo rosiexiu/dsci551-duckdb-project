@@ -7,3 +7,11 @@ __pycache__/
 .Rhistory
 *.rtf
 student_vle_noheader.csv
+archive/
+
+# Large temp files
+student_vle_noheader.csv
+build_notebook.py
+generate_report.py
+setup.py.rtf
+project_Xiu.ipynb
